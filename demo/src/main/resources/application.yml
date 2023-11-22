@@ -1,0 +1,20 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///ssm_db
+    username: root
+    password: JIAle0618
+    type: com.alibaba.druid.pool.DruidDataSource
+  profiles:
+    active: ${profile.active}
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 80
+
+---
